@@ -1,0 +1,484 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://datos.santander.es/SantanderCensusDataOntology#"
+     xml:base="http://datos.santander.es/SantanderCensusDataOntology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://datos.santander.es/SantanderCensusDataOntology">
+        <owl:imports rdf:resource="http://schema.geolink.org/1.0/pattern/agentrole"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time#2016"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#alta -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#alta">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Baja"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Fecha"/>
+        <rdfs:label>alta</rdfs:label>
+        <skos:definition>fecha en la que se realizó la baja</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Fecha"/>
+        <rdfs:label>fecha de creacion</rdfs:label>
+        <skos:definition>fecha de incorporacion de un pais en la base de datos</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#fechaEscision -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#fechaEscision">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Fecha"/>
+        <rdfs:label>fecha de escision</rdfs:label>
+        <skos:definition>fecha de escision de un pais en la base de datos</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#hasPart">
+        <owl:inverseOf rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#partOf"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Lugar"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Lugar"/>
+        <rdfs:label>hasPart</rdfs:label>
+        <skos:definition>clase que se divide en partes</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#motivo -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#motivo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Baja"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja"/>
+        <rdfs:label>motivo de baja</rdfs:label>
+        <skos:definition>motivo por el que se ha realizado la baja</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#nacionalidad -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#nacionalidad">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+        <rdfs:label>nacionalidad</rdfs:label>
+        <skos:definition>nacionalidad de una persona</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio"/>
+        <rdfs:label>nivel de estudios</rdfs:label>
+        <skos:definition>nivel de estudios de una persona</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#padreDe -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#padreDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:label>padre de</rdfs:label>
+        <skos:definition>persona padre de otra persona</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#paisDestino -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#paisDestino">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+        <rdfs:label>pais de destino</rdfs:label>
+        <skos:definition>pais de destino tras la baja</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+        <rdfs:label>pais de nacimiento</rdfs:label>
+        <skos:definition>pais de nacimiento de la persona</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+        <rdfs:label>pais de procedencia</rdfs:label>
+        <skos:definition>pais de procedencia de la persona</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#partOf">
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Lugar"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Lugar"/>
+        <rdfs:label>partOf</rdfs:label>
+        <skos:definition>clase que forma parte de</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#personaVinculada -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#personaVinculada">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Baja"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:label>persona vinculada</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#provinciaNacimiento -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#provinciaNacimiento">
+        <rdfs:subPropertyOf rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#provinciadestino"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Provincia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#provinciadestino -->
+
+    <owl:ObjectProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#provinciadestino">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Provincia"/>
+        <rdfs:label>provincia de destino</rdfs:label>
+        <skos:definition>provincia a la que se ha movido la persona tras la baja (si es en España)</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#codigoMB -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#codigoMB">
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:label>codigo motivo de baja</rdfs:label>
+        <skos:definition>codigo identificador de un motivo de baja</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#codigoNE -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#codigoNE">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:label>codifo nivel de estudios</rdfs:label>
+        <skos:definition>codigo identificador de un nivel de estudios</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#codigoPostal -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#codigoPostal">
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:label>codigo postal</rdfs:label>
+        <skos:definition>codigo postal de la persona antes de realizarse la baja</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#descripcionMB -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#descripcionMB">
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>descripcion motivo de baja</rdfs:label>
+        <skos:definition>descripcion de motivo de baja</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#edad -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#edad">
+        <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/age"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedInt"/>
+        <rdfs:label>edad</rdfs:label>
+        <skos:definition>edad de una persona en la fecha que se dio el parte de baja</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#identifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Baja"/>
+                    <rdf:Description rdf:about="http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja"/>
+                    <rdf:Description rdf:about="http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio"/>
+                    <rdf:Description rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+        <rdfs:label>identificador</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#modified -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#modified">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Baja"/>
+                    <rdf:Description rdf:about="http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja"/>
+                    <rdf:Description rdf:about="http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio"/>
+                    <rdf:Description rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label>fecha de modificacion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#nivelNE -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#nivelNE">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>descripcion nivel de estudios</rdfs:label>
+        <skos:definition>descripcion de nivel de estudios</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#nombreP -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#nombreP">
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>nombre pais</rdfs:label>
+        <skos:definition>nombre de un pais</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#nombrePr -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#nombrePr">
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Provincia"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>nombre provincia</rdfs:label>
+        <skos:definition>nombre de una provincia española</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#sexo -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#sexo">
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>sexo</rdfs:label>
+        <skos:definition>sexo de una persona</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#titulacion -->
+
+    <owl:DatatypeProperty rdf:about="http://datos.santander.es/SantanderCensusDataOntology#titulacion">
+        <rdfs:domain rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Persona"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>titulacion</rdfs:label>
+        <skos:definition>descripcion de la titulacion de una persona</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#Baja -->
+
+    <owl:Class rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Baja">
+        <rdfs:label>Baja de poblacion</rdfs:label>
+        <rdfs:label>Una baja de poblacion referida  a una persona</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#Fecha -->
+
+    <owl:Class rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Fecha">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TimePosition"/>
+        <rdfs:comment>Fecha para marcar eventos en el tiempo</rdfs:comment>
+        <rdfs:label>Fecha</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#Lugar -->
+
+    <owl:Class rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Lugar">
+        <rdfs:comment>Lugar para marcar un territorio concreto</rdfs:comment>
+        <rdfs:label>Lugar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja -->
+
+    <owl:Class rdf:about="http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja">
+        <rdfs:label>Motivo de baja</rdfs:label>
+        <skos:definition>Motivo por el cual un habitante se ha dado de baja en la población</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio -->
+
+    <owl:Class rdf:about="http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio">
+        <rdfs:label>Nivel de estudios</rdfs:label>
+        <skos:definition>Nivel de estudios de un ciudadano</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#Pais -->
+
+    <owl:Class rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Pais">
+        <rdfs:subClassOf rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Lugar"/>
+        <owl:disjointWith rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Provincia"/>
+        <rdfs:label>Pais</rdfs:label>
+        <skos:definition>Un país contenido en dbpedia</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#Persona -->
+
+    <owl:Class rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Persona">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+        <rdfs:comment>Descripcion de habitante</rdfs:comment>
+        <rdfs:label>Persona</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://datos.santander.es/SantanderCensusDataOntology#Provincia -->
+
+    <owl:Class rdf:about="http://datos.santander.es/SantanderCensusDataOntology#Provincia">
+        <rdfs:subClassOf rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Lugar"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#partOf"/>
+                <owl:someValuesFrom rdf:resource="http://datos.santander.es/SantanderCensusDataOntology#Pais"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Provincia</rdfs:label>
+        <skos:definition>Una provincia dentro del territorio español</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.geolink.org/1.0/pattern/agentrole#Agent -->
+
+    <rdf:Description rdf:about="http://schema.geolink.org/1.0/pattern/agentrole#Agent">
+        <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
