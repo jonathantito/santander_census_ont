@@ -1,0 +1,318 @@
+<http://datos.santander.es/SantanderCensusDataOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://datos.santander.es/SantanderCensusDataOntology> <http://www.w3.org/2002/07/owl#imports> <http://schema.geolink.org/1.0/pattern/agentrole> .
+<http://datos.santander.es/SantanderCensusDataOntology> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time#2016> .
+<http://datos.santander.es/SantanderCensusDataOntology> <http://www.w3.org/2002/07/owl#imports> <http://xmlns.com/foaf/0.1/> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#alta
+<http://datos.santander.es/SantanderCensusDataOntology#alta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#alta> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#alta> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Baja> .
+<http://datos.santander.es/SantanderCensusDataOntology#alta> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Fecha> .
+<http://datos.santander.es/SantanderCensusDataOntology#alta> <http://www.w3.org/2000/01/rdf-schema#label> "alta" .
+<http://datos.santander.es/SantanderCensusDataOntology#alta> <http://www.w3.org/2004/02/skos/core#definition> "fecha en la que se realizó la baja" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion
+<http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Fecha> .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de creacion" .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion> <http://www.w3.org/2004/02/skos/core#definition> "fecha de incorporacion de un pais en la base de datos" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#fechaEscision
+<http://datos.santander.es/SantanderCensusDataOntology#fechaEscision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaEscision> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaEscision> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaEscision> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Fecha> .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaEscision> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de escision" .
+<http://datos.santander.es/SantanderCensusDataOntology#fechaEscision> <http://www.w3.org/2004/02/skos/core#definition> "fecha de escision de un pais en la base de datos" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#hasPart
+<http://datos.santander.es/SantanderCensusDataOntology#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <http://datos.santander.es/SantanderCensusDataOntology#partOf> .
+<http://datos.santander.es/SantanderCensusDataOntology#hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Lugar> .
+<http://datos.santander.es/SantanderCensusDataOntology#hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Lugar> .
+<http://datos.santander.es/SantanderCensusDataOntology#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "hasPart" .
+<http://datos.santander.es/SantanderCensusDataOntology#hasPart> <http://www.w3.org/2004/02/skos/core#definition> "clase que se divide en partes" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#motivo
+<http://datos.santander.es/SantanderCensusDataOntology#motivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#motivo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#motivo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Baja> .
+<http://datos.santander.es/SantanderCensusDataOntology#motivo> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja> .
+<http://datos.santander.es/SantanderCensusDataOntology#motivo> <http://www.w3.org/2000/01/rdf-schema#label> "motivo de baja" .
+<http://datos.santander.es/SantanderCensusDataOntology#motivo> <http://www.w3.org/2004/02/skos/core#definition> "motivo por el que se ha realizado la baja" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#nacionalidad
+<http://datos.santander.es/SantanderCensusDataOntology#nacionalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#nacionalidad> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#nacionalidad> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#nacionalidad> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+<http://datos.santander.es/SantanderCensusDataOntology#nacionalidad> <http://www.w3.org/2000/01/rdf-schema#label> "nacionalidad" .
+<http://datos.santander.es/SantanderCensusDataOntology#nacionalidad> <http://www.w3.org/2004/02/skos/core#definition> "nacionalidad de una persona" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios
+<http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio> .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios> <http://www.w3.org/2000/01/rdf-schema#label> "nivel de estudios" .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios> <http://www.w3.org/2004/02/skos/core#definition> "nivel de estudios de una persona" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#padreDe
+<http://datos.santander.es/SantanderCensusDataOntology#padreDe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#padreDe> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#padreDe> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#padreDe> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#padreDe> <http://www.w3.org/2000/01/rdf-schema#label> "padre de" .
+<http://datos.santander.es/SantanderCensusDataOntology#padreDe> <http://www.w3.org/2004/02/skos/core#definition> "persona padre de otra persona" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#paisDestino
+<http://datos.santander.es/SantanderCensusDataOntology#paisDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisDestino> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisDestino> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisDestino> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisDestino> <http://www.w3.org/2000/01/rdf-schema#label> "pais de destino" .
+<http://datos.santander.es/SantanderCensusDataOntology#paisDestino> <http://www.w3.org/2004/02/skos/core#definition> "pais de destino tras la baja" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento
+<http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento> <http://www.w3.org/2000/01/rdf-schema#label> "pais de nacimiento" .
+<http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento> <http://www.w3.org/2004/02/skos/core#definition> "pais de nacimiento de la persona" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia
+<http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+<http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "pais de procedencia" .
+<http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia> <http://www.w3.org/2004/02/skos/core#definition> "pais de procedencia de la persona" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#partOf
+<http://datos.santander.es/SantanderCensusDataOntology#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#partOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Lugar> .
+<http://datos.santander.es/SantanderCensusDataOntology#partOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Lugar> .
+<http://datos.santander.es/SantanderCensusDataOntology#partOf> <http://www.w3.org/2000/01/rdf-schema#label> "partOf" .
+<http://datos.santander.es/SantanderCensusDataOntology#partOf> <http://www.w3.org/2004/02/skos/core#definition> "clase que forma parte de" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#personaVinculada
+<http://datos.santander.es/SantanderCensusDataOntology#personaVinculada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#personaVinculada> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#personaVinculada> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Baja> .
+<http://datos.santander.es/SantanderCensusDataOntology#personaVinculada> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#personaVinculada> <http://www.w3.org/2000/01/rdf-schema#label> "persona vinculada" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#provinciaNacimiento
+<http://datos.santander.es/SantanderCensusDataOntology#provinciaNacimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#provinciaNacimiento> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://datos.santander.es/SantanderCensusDataOntology#provinciadestino> .
+<http://datos.santander.es/SantanderCensusDataOntology#provinciaNacimiento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#provinciaNacimiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Provincia> .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#provinciadestino
+<http://datos.santander.es/SantanderCensusDataOntology#provinciadestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#provinciadestino> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#provinciadestino> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#provinciadestino> <http://www.w3.org/2000/01/rdf-schema#range> <http://datos.santander.es/SantanderCensusDataOntology#Provincia> .
+<http://datos.santander.es/SantanderCensusDataOntology#provinciadestino> <http://www.w3.org/2000/01/rdf-schema#label> "provincia de destino" .
+<http://datos.santander.es/SantanderCensusDataOntology#provinciadestino> <http://www.w3.org/2004/02/skos/core#definition> "provincia a la que se ha movido la persona tras la baja (si es en España)" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#codigoMB
+<http://datos.santander.es/SantanderCensusDataOntology#codigoMB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoMB> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoMB> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoMB> <http://www.w3.org/2000/01/rdf-schema#label> "codigo motivo de baja" .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoMB> <http://www.w3.org/2004/02/skos/core#definition> "codigo identificador de un motivo de baja" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#codigoNE
+<http://datos.santander.es/SantanderCensusDataOntology#codigoNE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoNE> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoNE> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoNE> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoNE> <http://www.w3.org/2000/01/rdf-schema#label> "codifo nivel de estudios" .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoNE> <http://www.w3.org/2004/02/skos/core#definition> "codigo identificador de un nivel de estudios" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#codigoPostal
+<http://datos.santander.es/SantanderCensusDataOntology#codigoPostal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoPostal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoPostal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoPostal> <http://www.w3.org/2000/01/rdf-schema#label> "codigo postal" .
+<http://datos.santander.es/SantanderCensusDataOntology#codigoPostal> <http://www.w3.org/2004/02/skos/core#definition> "codigo postal de la persona antes de realizarse la baja" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#descripcionMB
+<http://datos.santander.es/SantanderCensusDataOntology#descripcionMB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#descripcionMB> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja> .
+<http://datos.santander.es/SantanderCensusDataOntology#descripcionMB> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://datos.santander.es/SantanderCensusDataOntology#descripcionMB> <http://www.w3.org/2000/01/rdf-schema#label> "descripcion motivo de baja" .
+<http://datos.santander.es/SantanderCensusDataOntology#descripcionMB> <http://www.w3.org/2004/02/skos/core#definition> "descripcion de motivo de baja" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#edad
+<http://datos.santander.es/SantanderCensusDataOntology#edad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#edad> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/age> .
+<http://datos.santander.es/SantanderCensusDataOntology#edad> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#edad> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedInt> .
+<http://datos.santander.es/SantanderCensusDataOntology#edad> <http://www.w3.org/2000/01/rdf-schema#label> "edad" .
+<http://datos.santander.es/SantanderCensusDataOntology#edad> <http://www.w3.org/2004/02/skos/core#definition> "edad de una persona en la fecha que se dio el parte de baja" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#identifier
+<http://datos.santander.es/SantanderCensusDataOntology#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#identifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#identifier> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://datos.santander.es/SantanderCensusDataOntology#Baja> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://datos.santander.es/SantanderCensusDataOntology#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#unsignedLong> .
+<http://datos.santander.es/SantanderCensusDataOntology#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identificador" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#modified
+<http://datos.santander.es/SantanderCensusDataOntology#modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#modified> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#modified> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://datos.santander.es/SantanderCensusDataOntology#Baja> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://datos.santander.es/SantanderCensusDataOntology#modified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://datos.santander.es/SantanderCensusDataOntology#modified> <http://www.w3.org/2000/01/rdf-schema#label> "fecha de modificacion" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#nivelNE
+<http://datos.santander.es/SantanderCensusDataOntology#nivelNE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelNE> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelNE> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio> .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelNE> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelNE> <http://www.w3.org/2000/01/rdf-schema#label> "descripcion nivel de estudios" .
+<http://datos.santander.es/SantanderCensusDataOntology#nivelNE> <http://www.w3.org/2004/02/skos/core#definition> "descripcion de nivel de estudios" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#nombreP
+<http://datos.santander.es/SantanderCensusDataOntology#nombreP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#nombreP> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+<http://datos.santander.es/SantanderCensusDataOntology#nombreP> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://datos.santander.es/SantanderCensusDataOntology#nombreP> <http://www.w3.org/2000/01/rdf-schema#label> "nombre pais" .
+<http://datos.santander.es/SantanderCensusDataOntology#nombreP> <http://www.w3.org/2004/02/skos/core#definition> "nombre de un pais" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#nombrePr
+<http://datos.santander.es/SantanderCensusDataOntology#nombrePr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#nombrePr> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Provincia> .
+<http://datos.santander.es/SantanderCensusDataOntology#nombrePr> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://datos.santander.es/SantanderCensusDataOntology#nombrePr> <http://www.w3.org/2000/01/rdf-schema#label> "nombre provincia" .
+<http://datos.santander.es/SantanderCensusDataOntology#nombrePr> <http://www.w3.org/2004/02/skos/core#definition> "nombre de una provincia española" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#sexo
+<http://datos.santander.es/SantanderCensusDataOntology#sexo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#sexo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#sexo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://datos.santander.es/SantanderCensusDataOntology#sexo> <http://www.w3.org/2000/01/rdf-schema#label> "sexo" .
+<http://datos.santander.es/SantanderCensusDataOntology#sexo> <http://www.w3.org/2004/02/skos/core#definition> "sexo de una persona" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#titulacion
+<http://datos.santander.es/SantanderCensusDataOntology#titulacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://datos.santander.es/SantanderCensusDataOntology#titulacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://datos.santander.es/SantanderCensusDataOntology#Persona> .
+<http://datos.santander.es/SantanderCensusDataOntology#titulacion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://datos.santander.es/SantanderCensusDataOntology#titulacion> <http://www.w3.org/2000/01/rdf-schema#label> "titulacion" .
+<http://datos.santander.es/SantanderCensusDataOntology#titulacion> <http://www.w3.org/2004/02/skos/core#definition> "descripcion de la titulacion de una persona" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#Baja
+<http://datos.santander.es/SantanderCensusDataOntology#Baja> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://datos.santander.es/SantanderCensusDataOntology#Baja> <http://www.w3.org/2000/01/rdf-schema#label> "Baja de poblacion" .
+<http://datos.santander.es/SantanderCensusDataOntology#Baja> <http://www.w3.org/2000/01/rdf-schema#label> "Una baja de poblacion referida  a una persona" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#Fecha
+<http://datos.santander.es/SantanderCensusDataOntology#Fecha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://datos.santander.es/SantanderCensusDataOntology#Fecha> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TimePosition> .
+<http://datos.santander.es/SantanderCensusDataOntology#Fecha> <http://www.w3.org/2000/01/rdf-schema#comment> "Fecha para marcar eventos en el tiempo" .
+<http://datos.santander.es/SantanderCensusDataOntology#Fecha> <http://www.w3.org/2000/01/rdf-schema#label> "Fecha" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#Lugar
+<http://datos.santander.es/SantanderCensusDataOntology#Lugar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://datos.santander.es/SantanderCensusDataOntology#Lugar> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar para marcar un territorio concreto" .
+<http://datos.santander.es/SantanderCensusDataOntology#Lugar> <http://www.w3.org/2000/01/rdf-schema#label> "Lugar" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja
+<http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja> <http://www.w3.org/2000/01/rdf-schema#label> "Motivo de baja" .
+<http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja> <http://www.w3.org/2004/02/skos/core#definition> "Motivo por el cual un habitante se ha dado de baja en la población" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio
+<http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de estudios" .
+<http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio> <http://www.w3.org/2004/02/skos/core#definition> "Nivel de estudios de un ciudadano" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#Pais
+<http://datos.santander.es/SantanderCensusDataOntology#Pais> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://datos.santander.es/SantanderCensusDataOntology#Pais> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://datos.santander.es/SantanderCensusDataOntology#Lugar> .
+<http://datos.santander.es/SantanderCensusDataOntology#Pais> <http://www.w3.org/2002/07/owl#disjointWith> <http://datos.santander.es/SantanderCensusDataOntology#Provincia> .
+<http://datos.santander.es/SantanderCensusDataOntology#Pais> <http://www.w3.org/2000/01/rdf-schema#label> "Pais" .
+<http://datos.santander.es/SantanderCensusDataOntology#Pais> <http://www.w3.org/2004/02/skos/core#definition> "Un país contenido en dbpedia" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#Persona
+<http://datos.santander.es/SantanderCensusDataOntology#Persona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://datos.santander.es/SantanderCensusDataOntology#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/10/swap/pim/contact#Person> .
+<http://datos.santander.es/SantanderCensusDataOntology#Persona> <http://www.w3.org/2000/01/rdf-schema#comment> "Descripcion de habitante" .
+<http://datos.santander.es/SantanderCensusDataOntology#Persona> <http://www.w3.org/2000/01/rdf-schema#label> "Persona" .
+# 
+# http://datos.santander.es/SantanderCensusDataOntology#Provincia
+<http://datos.santander.es/SantanderCensusDataOntology#Provincia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://datos.santander.es/SantanderCensusDataOntology#Provincia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://datos.santander.es/SantanderCensusDataOntology#Lugar> .
+<http://datos.santander.es/SantanderCensusDataOntology#Provincia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://datos.santander.es/SantanderCensusDataOntology#partOf> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://datos.santander.es/SantanderCensusDataOntology#Pais> .
+<http://datos.santander.es/SantanderCensusDataOntology#Provincia> <http://www.w3.org/2000/01/rdf-schema#label> "Provincia" .
+<http://datos.santander.es/SantanderCensusDataOntology#Provincia> <http://www.w3.org/2004/02/skos/core#definition> "Una provincia dentro del territorio español" .
+# 
+# http://schema.geolink.org/1.0/pattern/agentrole#Agent
+<http://schema.geolink.org/1.0/pattern/agentrole#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.geolink.org/1.0/pattern/agentrole#Agent> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Agent> .
+# 
+# http://xmlns.com/foaf/0.1/Agent
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/

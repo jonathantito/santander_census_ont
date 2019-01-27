@@ -1,0 +1,332 @@
+@prefix : <http://datos.santander.es/SantanderCensusDataOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://datos.santander.es/SantanderCensusDataOntology> .
+
+<http://datos.santander.es/SantanderCensusDataOntology> rdf:type owl:Ontology ;
+                                                         owl:imports <http://schema.geolink.org/1.0/pattern/agentrole> ,
+                                                                     <http://www.w3.org/2006/time#2016> ,
+                                                                     <http://xmlns.com/foaf/0.1/> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://datos.santander.es/SantanderCensusDataOntology#alta
+:alta rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf owl:topObjectProperty ;
+      rdfs:domain :Baja ;
+      rdfs:range :Fecha ;
+      rdfs:label "alta" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "fecha en la que se realizó la baja" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#fechaCreacion
+:fechaCreacion rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Pais ;
+               rdfs:range :Fecha ;
+               rdfs:label "fecha de creacion" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "fecha de incorporacion de un pais en la base de datos" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#fechaEscision
+:fechaEscision rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Pais ;
+               rdfs:range :Fecha ;
+               rdfs:label "fecha de escision" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "fecha de escision de un pais en la base de datos" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         owl:inverseOf :partOf ;
+         rdfs:domain :Lugar ;
+         rdfs:range :Lugar ;
+         rdfs:label "hasPart" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "clase que se divide en partes" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#motivo
+:motivo rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain :Baja ;
+        rdfs:range :MotivoBaja ;
+        rdfs:label "motivo de baja" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "motivo por el que se ha realizado la baja" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#nacionalidad
+:nacionalidad rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Persona ;
+              rdfs:range :Pais ;
+              rdfs:label "nacionalidad" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "nacionalidad de una persona" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#nivelEstudios
+:nivelEstudios rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Persona ;
+               rdfs:range :NivelEstudio ;
+               rdfs:label "nivel de estudios" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "nivel de estudios de una persona" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#padreDe
+:padreDe rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdfs:domain :Persona ;
+         rdfs:range :Persona ;
+         rdfs:label "padre de" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "persona padre de otra persona" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#paisDestino
+:paisDestino rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Persona ;
+             rdfs:range :Pais ;
+             rdfs:label "pais de destino" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "pais de destino tras la baja" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#paisNacimiento
+:paisNacimiento rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :Persona ;
+                rdfs:range :Pais ;
+                rdfs:label "pais de nacimiento" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "pais de nacimiento de la persona" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#paisProcedencia
+:paisProcedencia rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain :Persona ;
+                 rdfs:range :Pais ;
+                 rdfs:label "pais de procedencia" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "pais de procedencia de la persona" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#partOf
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:domain :Lugar ;
+        rdfs:range :Lugar ;
+        rdfs:label "partOf" ;
+        <http://www.w3.org/2004/02/skos/core#definition> "clase que forma parte de" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#personaVinculada
+:personaVinculada rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :Baja ;
+                  rdfs:range :Persona ;
+                  rdfs:label "persona vinculada" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#provinciaNacimiento
+:provinciaNacimiento rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :provinciadestino ;
+                     rdfs:domain :Persona ;
+                     rdfs:range :Provincia .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#provinciadestino
+:provinciadestino rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :Persona ;
+                  rdfs:range :Provincia ;
+                  rdfs:label "provincia de destino" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "provincia a la que se ha movido la persona tras la baja (si es en España)" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://datos.santander.es/SantanderCensusDataOntology#codigoMB
+:codigoMB rdf:type owl:DatatypeProperty ;
+          rdfs:domain :MotivoBaja ;
+          rdfs:range xsd:unsignedInt ;
+          rdfs:label "codigo motivo de baja" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "codigo identificador de un motivo de baja" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#codigoNE
+:codigoNE rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :NivelEstudio ;
+          rdfs:range xsd:unsignedInt ;
+          rdfs:label "codifo nivel de estudios" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "codigo identificador de un nivel de estudios" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#codigoPostal
+:codigoPostal rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Persona ;
+              rdfs:range xsd:unsignedInt ;
+              rdfs:label "codigo postal" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "codigo postal de la persona antes de realizarse la baja" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#descripcionMB
+:descripcionMB rdf:type owl:DatatypeProperty ;
+               rdfs:domain :MotivoBaja ;
+               rdfs:range xsd:string ;
+               rdfs:label "descripcion motivo de baja" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "descripcion de motivo de baja" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#edad
+:edad rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf <http://xmlns.com/foaf/0.1/age> ;
+      rdfs:domain :Persona ;
+      rdfs:range xsd:unsignedInt ;
+      rdfs:label "edad" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "edad de una persona en la fecha que se dio el parte de baja" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#identifier
+:identifier rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :Baja
+                                        :MotivoBaja
+                                        :NivelEstudio
+                                        :Pais
+                                      )
+                        ] ;
+            rdfs:range xsd:unsignedLong ;
+            rdfs:label "identificador" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#modified
+:modified rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Baja
+                                      :MotivoBaja
+                                      :NivelEstudio
+                                      :Pais
+                                    )
+                      ] ;
+          rdfs:range xsd:dateTime ;
+          rdfs:label "fecha de modificacion" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#nivelNE
+:nivelNE rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :NivelEstudio ;
+         rdfs:range xsd:string ;
+         rdfs:label "descripcion nivel de estudios" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "descripcion de nivel de estudios" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#nombreP
+:nombreP rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Pais ;
+         rdfs:range xsd:string ;
+         rdfs:label "nombre pais" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "nombre de un pais" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#nombrePr
+:nombrePr rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Provincia ;
+          rdfs:range xsd:string ;
+          rdfs:label "nombre provincia" ;
+          <http://www.w3.org/2004/02/skos/core#definition> "nombre de una provincia española" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#sexo
+:sexo rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Persona ;
+      rdfs:range xsd:string ;
+      rdfs:label "sexo" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "sexo de una persona" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#titulacion
+:titulacion rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Persona ;
+            rdfs:range xsd:string ;
+            rdfs:label "titulacion" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "descripcion de la titulacion de una persona" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://datos.santander.es/SantanderCensusDataOntology#Baja
+:Baja rdf:type owl:Class ;
+      rdfs:label "Baja de poblacion" ,
+                 "Una baja de poblacion referida  a una persona" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#Fecha
+:Fecha rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.w3.org/2006/time#TimePosition> ;
+       rdfs:comment "Fecha para marcar eventos en el tiempo" ;
+       rdfs:label "Fecha" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#Lugar
+:Lugar rdf:type owl:Class ;
+       rdfs:comment "Lugar para marcar un territorio concreto" ;
+       rdfs:label "Lugar" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#MotivoBaja
+:MotivoBaja rdf:type owl:Class ;
+            rdfs:label "Motivo de baja" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Motivo por el cual un habitante se ha dado de baja en la población" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#NivelEstudio
+:NivelEstudio rdf:type owl:Class ;
+              rdfs:label "Nivel de estudios" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Nivel de estudios de un ciudadano" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#Pais
+:Pais rdf:type owl:Class ;
+      rdfs:subClassOf :Lugar ;
+      owl:disjointWith :Provincia ;
+      rdfs:label "Pais" ;
+      <http://www.w3.org/2004/02/skos/core#definition> "Un país contenido en dbpedia" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#Persona
+:Persona rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/2000/10/swap/pim/contact#Person> ;
+         rdfs:comment "Descripcion de habitante" ;
+         rdfs:label "Persona" .
+
+
+###  http://datos.santander.es/SantanderCensusDataOntology#Provincia
+:Provincia rdf:type owl:Class ;
+           rdfs:subClassOf :Lugar ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :partOf ;
+                             owl:someValuesFrom :Pais
+                           ] ;
+           rdfs:label "Provincia" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Una provincia dentro del territorio español" .
+
+
+###  http://schema.geolink.org/1.0/pattern/agentrole#Agent
+<http://schema.geolink.org/1.0/pattern/agentrole#Agent> rdf:type owl:Class ;
+                                                        owl:equivalentClass <http://xmlns.com/foaf/0.1/Agent> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
